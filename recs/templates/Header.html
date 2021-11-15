@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>MEW3s_v1.0</title>
+
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="navbar-nav">
+        <!-- urls.pyで定義したアプリ名 + urlpatternのpathで定めたnameを指定し、リンクで遷移できるようにする -->
+         <!-- <a class="navbar-brand" href= "{% url 'App:home' %}"> -->
+        <a href="{% url 'App:home' %}"> MEWs　　   </a>
+        <br> <br>
+        <a href="{% url 'App:section1_1' %}"> 1-1: 水酸化ナトリウムの秤量　</a>
+        <br>
+        <a href="{% url 'App:section1_2'%}"> 1-2: 1M 塩化水素溶液で滴定する　</a>
+        <br>
+        <a href="{% url 'App:section1_3'%}"> 1-3: リトマス紙で液性を確認する　</a>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Company_list.htmlのHTMLコンテンツを呼び出し -->
+    <div class="container">
+      {% block content_block %}
+      {% endblock %}
+    </div>
+
+  </body>
+</html>

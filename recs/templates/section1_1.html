@@ -1,0 +1,28 @@
+<html>
+{% extends "Header.html" %}
+
+
+{% block content_block %}
+  
+
+    <h2> {{section.loc}} :[{{section.title}}]を記録する </h2>
+
+    {{ form.check1 }} {{section.iText1}} 
+    <br>
+    {{ form.check2 }} {{section.iText2}} 
+    <br>
+    lot:    {{form.aItemID2}}
+    <br>
+    <a href="#">秤量前校正を実施する。</a>
+    <br>
+    秤量:   {{form.aQty2}} g
+    <br>
+    <a href ="{% url 'App:help1_1' %}"> help</a>
+    <br><br>
+        
+    <form method="POST"> {% csrf_token %}
+        <input type="submit" class='btn btn-primary' value="登録">
+    </form>
+
+{% endblock %}
+</html>

@@ -1,0 +1,15 @@
+<html>
+{% extends "Header.html" %}
+{% load static %}
+
+
+{% block content_block %}
+<h1> 1 L ジョッキ</h1>
+<br>
+<img src = "{% static 'jock.jpg' %}" width="200" height="180" >
+
+<h1> 動画での説明 </h1>
+<video src="{% static 'video_1.mp4' %}" controls></video>
+
+{% endblock %}
+</html>
